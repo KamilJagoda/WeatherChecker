@@ -28,7 +28,6 @@ function api(city) {
 
             var data = JSON.parse(this.response);
 
-            console.log(data);
             const userCity = document.createElement('h2');
             userCity.textContent = data.name;
 
@@ -65,8 +64,16 @@ function api(city) {
 
         } else {
             const errorMessage = document.createElement('error');
+
+            var errorElement = document.getElementsByTagName("error"), index;
+
+            for (index = errorElement.length - 1; index >= 0; index--) {
+                errorElement[index].parentNode.removeChild(errorElement[index]);
+            }
+
             errorMessage.textContent = `Wrong city name`;
             container.appendChild(errorMessage);
+
         }
     };
 
