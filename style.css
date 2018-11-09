@@ -56,10 +56,13 @@ img {
     border-radius: 0 9px 9px 0;
     padding: 0 10px;
     line-height: 1;
-    vertical-align: middle
+    vertical-align: middle;
+    cursor: pointer;
 
 }
-
+#submit-btn:hover {
+    background: #5d5d5d;
+}
 #submit-btn:focus {
     outline: 0;
 }
